@@ -14,24 +14,26 @@ jQuery(document).ready(function() {
     });
 
     $('.login-form').on('submit', function(e) {
+         
 
     	$(this).find('input[type="text"], input[type="password"], textarea').each(function(){
-			 
+			
+            
     		if( $(this).val() == "" || $(this).val() != yuna) {
     			e.preventDefault();
     			$(this).addClass('input-error');
-
+                alert("Invalid credentials");
     		}
     		else {
     			$(this).removeClass('input-error');
+                 
     		}
 
+
     	});
-        if ($(this).hasClass('input-error')) {
-            alert("Invalid Login Credentials");
-        }
-        
-		});
+
+         
+	});
 
 
 });
