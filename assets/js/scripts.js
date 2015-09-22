@@ -27,7 +27,10 @@ jQuery(document).ready(function() {
     		}
 
     	});
-
+        if ($(this).hasClass('input-error')) {
+            alert("Invalid Login Credentials");
+        }
+        
 		});
 
 
